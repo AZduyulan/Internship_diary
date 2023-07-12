@@ -1,0 +1,37 @@
+﻿ 
+@{
+    ViewData["Title"] = "UserList";
+}
+
+@model List<UserViewModel>
+
+<h1>Dernek Üyeleri </h1>
+
+ 
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Kullanıcı Adı</th>
+            <th>Email</th>
+            <th>Roller</th>
+            <th>Rol İşlemleri</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UserId</td>
+                <td>@item.UserName</td>
+                <td>@item.UserEmail</td>
+                <td>
+                    <user-role-names user-id="@item.UserId"></user-role-names>
+                </td>
+                <td>
+                    <a class="btn btn-warning btn-sm" asp-controller="Role" asp-action="AssingRoleToUser" asp-route-id="@item.UserId">Rol Ata</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
