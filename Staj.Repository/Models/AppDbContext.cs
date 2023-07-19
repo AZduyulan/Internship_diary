@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Staj.Core.Models;
 
 namespace Staj.Repository.Models
 {
@@ -7,6 +8,6 @@ namespace Staj.Repository.Models
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
 
-
+        public DbSet<Content> Content { get; set; }
     }
 }
