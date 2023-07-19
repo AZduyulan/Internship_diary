@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "ContentPDF";
+}
+
+
+
+@model ContentPDFViewModel
+
+<div class="row">
+    <div class="row">
+         <p>@Model.UniName</p>
+        <div class="col-md-6 offset-md-3">
+            <content-picture-thumbnail class="rounded" style="width:100px" picture-url="@Model.UniCover"></content-picture-thumbnail>
+        </div>
+    </div>
+   
+    <div class="col-md-6 offset-md-3">
+        <h1>Kullanici bilgi</h1>
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Adı</th>
+                    <th>Soy Adı</th>
+                    <th>Bölümü</th>
+                    <th>Staj No</th>
+                    <th>Staj Adı</th>
+                    <th>Staj Başlama Tarihi</th>
+                    <th>Staj Bitiş Tarihi</th>
+                    <th>Staj Yeri Adı</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Name</td>
+                    <td>@Model.SurName</td>
+                    <td>@Model.Departmant</td>
+                    <td>@Model.StajNo</td>
+                    <td>@Model.StajName</td>
+                    <td>@Model.Start</td>
+                    <td>@Model.End</td>
+                    <td>@Model.StajPlace</td>                    
+                </tr>
+            </tbody>
+
+        </table>
+    </div>  
+</div>

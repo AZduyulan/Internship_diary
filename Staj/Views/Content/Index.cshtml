@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model List<ContentViewModel>
+
+@*<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>*@
+<div class="row">
+
+    <div class="card" style="width: 18rem;">
+        <img src="~/userpictures/default_add_picture.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Yeni Bir Staj Günlüğü Üretin</p>
+            <a class="btn btn-primary" asp-area="" asp-controller="Content" asp-action="Create" method="post">Üret</a>
+        </div>
+    </div>
+
+    <div class="flex text-center">
+        @foreach (var item in Model)
+        {
+            <div class="col-4">
+            <div class="card col-4" style="width: 18rem;">
+                    <content-picture-thumbnail class="rounded" style="width:100px" picture-url="@item.UniCover"></content-picture-thumbnail>
+                @*<img src="~/userpictures/default_add_picture.jpg" class="card-img-top" alt="...">*@
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">Staj Günlüğünüz</p>
+                    <p class="card-text">@item.Id</p>
+                    <a class="btn btn-primary" asp-area="" asp-controller="Content" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                    <a class="btn btn-primary" asp-area="" asp-controller="Content" asp-action="ContentEdit" asp-route-id="@item.Id" >Düzenle</a>
+                    <a class="btn btn-primary" asp-area="" asp-controller="Content" asp-action="ContentPDF" asp-route-id="@item.Id">Pdf</a>
+                </div>
+            </div>
+                </div>
+        }
+    </div>
+
+
+</div>
+

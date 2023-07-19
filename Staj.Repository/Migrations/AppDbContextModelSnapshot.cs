@@ -136,19 +136,68 @@ namespace Staj.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Article")
-                        .IsRequired()
+                    b.Property<string>("Birimi")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Cover")
-                        .IsRequired()
+                    b.Property<string>("Departmant")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("End")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UserId")
+                    b.Property<string>("IsyeriAdresi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IsyeriAdı")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IsyeriEposta")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IsyeriFax")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Isyeritelefon")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StajName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StajNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StajPlace")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StajYeriSorumlusuAdı")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StajYeriSorumlusuSoyAdı")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StajYeriSorumlusuUnvanı")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Start")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SurName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UniCover")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UniName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -317,9 +366,7 @@ namespace Staj.Migrations
                 {
                     b.HasOne("Staj.Repository.Models.AppUser", "User")
                         .WithMany("contents")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("User");
                 });

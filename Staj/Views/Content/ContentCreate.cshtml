@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewData["Title"] = "ContentCreate";
+}
+@model ContentCreateViewModel
+
+@section Scripts
+    {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+}
+<h4>Staj Ekle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-controller="Content" asp-action="Create"  method="post">
+            
+
+            <div class="row mb-3">
+                <label for="Name" class="col-md-4 col-form-label" asp-for="Name"></label>
+                <div class="col-md-8">
+                    <input asp-for="Name" class="form-control">
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="SurName" class="col-md-4 col-form-label" asp-for="SurName"></label>
+                <div class="col-md-8">
+                    <input asp-for="SurName" class="form-control">
+                    <span class="text-danger" asp-validation-for="SurName"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Departmant" class="col-md-4 col-form-label" asp-for="Departmant"></label>
+                <div class="col-md-8">
+                    <input asp-for="Departmant" class="form-control">
+                    <span class="text-danger" asp-validation-for="Departmant"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="StajNo" class="col-md-4 col-form-label" asp-for="StajNo"></label>
+                <div class="col-md-8">
+                    <input asp-for="StajNo" class="form-control">
+                    <span class="text-danger" asp-validation-for="StajNo"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="StajName" class="col-md-4 col-form-label" asp-for="StajName"></label>
+                <div class="col-md-8">
+                    <input asp-for="StajName" class="form-control">
+                    <span class="text-danger" asp-validation-for="StajName"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Start" class="col-md-4 col-form-label" asp-for="Start"></label>
+                <div class="col-md-8">
+                    <input asp-for="Start" class="form-control">
+                    <span class="text-danger" asp-validation-for="Start"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="End" class="col-md-4 col-form-label" asp-for="End"></label>
+                <div class="col-md-8">
+                    <input asp-for="End" class="form-control">
+                    <span class="text-danger" asp-validation-for="End"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="StajPlace" class="col-md-4 col-form-label" asp-for="StajPlace"></label>
+                <div class="col-md-8">
+                    <input asp-for="StajPlace" class="form-control">
+                    <span class="text-danger" asp-validation-for="StajPlace"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Description" class="col-md-4 col-form-label" asp-for="Description"></label>
+                <div class="col-md-8">
+                    <input asp-for="Description" class="form-control">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="IsyeriAdı" class="col-md-4 col-form-label" asp-for="IsyeriAdı"></label>
+                <div class="col-md-8">
+                    <input asp-for="IsyeriAdı" class="form-control">
+                    <span class="text-danger" asp-validation-for="IsyeriAdı"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="Birimi" class="col-md-4 col-form-label" asp-for="Birimi"></label>
+                <div class="col-md-8">
+                    <input asp-for="Birimi" class="form-control">
+                    <span class="text-danger" asp-validation-for="Birimi"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="IsyeriAdresi" class="col-md-4 col-form-label" asp-for="IsyeriAdresi"></label>
+                <div class="col-md-8">
+                    <input asp-for="IsyeriAdresi" class="form-control">
+                    <span class="text-danger" asp-validation-for="IsyeriAdresi"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="Birimi" class="col-md-4 col-form-label" asp-for="Isyeritelefon"></label>
+                <div class="col-md-8">
+                    <input asp-for="Isyeritelefon" class="form-control">
+                    <span class="text-danger" asp-validation-for="Isyeritelefon"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="IsyeriFax" class="col-md-4 col-form-label" asp-for="IsyeriFax"></label>
+                <div class="col-md-8">
+                    <input asp-for="IsyeriFax" class="form-control">
+                    <span class="text-danger" asp-validation-for="IsyeriFax"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="IsyeriEposta" class="col-md-4 col-form-label" asp-for="IsyeriEposta"></label>
+                <div class="col-md-8">
+                    <input asp-for="IsyeriEposta" class="form-control">
+                    <span class="text-danger" asp-validation-for="IsyeriEposta"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="StajYeriSorumlusuAdı" class="col-md-4 col-form-label" asp-for="StajYeriSorumlusuAdı"></label>
+                <div class="col-md-8">
+                    <input asp-for="StajYeriSorumlusuAdı" class="form-control">
+                    <span class="text-danger" asp-validation-for="StajYeriSorumlusuAdı"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="StajYeriSorumlusuSoyAdı" class="col-md-4 col-form-label" asp-for="StajYeriSorumlusuSoyAdı"></label>
+                <div class="col-md-8">
+                    <input asp-for="StajYeriSorumlusuSoyAdı" class="form-control">
+                    <span class="text-danger" asp-validation-for="StajYeriSorumlusuSoyAdı"></span>
+                </div>
+            </div>
+
+
+
+            <div class="row mb-3">
+                <label for="StajYeriSorumlusuUnvanı" class="col-md-4 col-form-label" asp-for="StajYeriSorumlusuUnvanı"></label>
+                <div class="col-md-8">
+                    <input asp-for="StajYeriSorumlusuUnvanı" class="form-control">
+                    <span class="text-danger" asp-validation-for="StajYeriSorumlusuUnvanı"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="UniName" class="col-md-4 col-form-label" asp-for="UniName"></label>
+                <div class="col-md-8">
+                    <input asp-for="UniName" class="form-control">
+                    <span class="text-danger" asp-validation-for="UniName"></span>
+                </div>
+            </div>
+
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Oluştur" class="btn btn-primary" />
+            </div>
+        </form>
+       
+
+    </div>
+</div>
+

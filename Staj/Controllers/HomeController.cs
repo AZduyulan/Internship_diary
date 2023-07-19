@@ -39,7 +39,7 @@ namespace Staj.Controllers
 
         public IActionResult SignUp() 
         {
-
+             
             return View();        
         }
 

@@ -6,6 +6,7 @@ using Staj.Extensions;
 using Staj.Repository.Models;
 using Staj.Core.OptionsModels;
 using Staj.Service.Services;
+using Staj.Service.Manager;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,7 @@ builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("Emai
 builder.Services.AddIdentityWithExt();
 builder.Services.AddScoped<IMemberService,MemberService>();
 builder.Services.AddScoped<IEmailService,EmaiLService>();
+builder.Services.AddScoped<IContentManager,ContentManager>();
 
 //builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<AppDbContext>();
 
